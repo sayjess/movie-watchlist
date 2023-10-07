@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset default styles */
+body,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+ 
+/* UTILITY CLASS */
+.flex {
+    display: flex;
+}
+
+
+ /* Loading spinner */
+.loading-spinner {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 5px solid rgb(202, 98, 98);
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.movie-list-container {
+    width: 500px;
+}
+  /* displayMovies */
+.movie-poster {
+    width: 99px;
+    height: 145px;
+    object-fit: cover;
+}
+
+.movie-details {
+    flex-direction: column;
+}
+
+.movie-details-one {
+    align-items: center;
+}
+
+.movie-title {
+    font-weight: bold; /*medium*/
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.fa-star {
+    margin-right: 4px;
+    color: #fec654;
+}
+
+.movie-rating {
+    font-size: 12px;
+}
+
+.movie-details-two {
+    justify-content: space-between;
+}
+
+/* ... (your existing CSS styles) */
+
+.movie-plot-container {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Adjust the number of lines to your preference */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative; /* Needed for positioning the button */
+}
+
+.movie-plot {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5; /* Adjust line height to control the number of lines */
+}
+
+.read-more-button {
+    display: none; /* Initially hide the button */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007bff; /* Adjust the button color */
+}
+
+
+
