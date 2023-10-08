@@ -58,6 +58,7 @@ a {
     width: 100%;
     height: 208px;
     position: relative;
+    
 }
 
 .top-container::before {
@@ -65,8 +66,9 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 208px;
-    background-color: rgba(0, 0, 0, 0.715);
+    background-color: rgba(0,0,0, 0.5);
     z-index: 1;
     pointer-events: none;
 }
@@ -87,7 +89,8 @@ a {
 .find-film {
     width: 100%;
     padding-block: 80px;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-inline: 50px;
     align-items: center;
 }
 
@@ -121,8 +124,8 @@ a {
 .loading-spinner {
     display: none;
     position: absolute;
-    right: 150px;
-    bottom: 10px;
+    right: 157px;
+    bottom: 11px;
 }
 
 .spinner {
@@ -200,6 +203,19 @@ a {
 .watchlist-container {
     align-items: center;
     cursor: pointer;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.watchlist-container:hover {
+    background-color: #2E2E2F;
+}
+
+.watchlist-container:active {
+    background-color: #4B4B4B;
 }
 
 .fa-star {
@@ -222,6 +238,10 @@ a {
 .movie-plot {
     color: #6B7280;
     font-size: 14px;
+}
+
+.fa-solid {
+    margin-right: 5px;
 }
 
 

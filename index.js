@@ -135,10 +135,10 @@ function displayMovies(movies) {
                     <div class='movie-details-two flex'>
                         <p class="movie-info">${Runtime ? Runtime : 'N/A'}</p>
                         <p class="movie-info">${Genre ? Genre : 'N/A'}</p>
-                        <span class='watchlist-container flex'>
-                            <i class="fa-solid fa-circle-plus" data-remove='${imdbID}'></i>
+                        <button class='watchlist-container flex'>
+                            <i class="fa-solid fa-circle-plus" data-add='${imdbID}'></i>
                             <p data-add='${imdbID}'>Watchlist</p>
-                        </span>
+                        </button>
                     </div>
                     <p class="movie-plot">${Plot ? Plot : 'N/A'}</p>
                 </div>
