@@ -150,10 +150,12 @@ function displayMovies(movies) {
 
 
 // if(window.location.href.includes('index.html')){
-    
 // } else if(window.location.href.includes('watchlist.html')){
+    
 // }
 
-console.log(window.location.href)
-searchButtonEl.addEventListener('click', getMovieDetails)
-document.addEventListener('DOMContentLoaded', renderWatchList)
+if (document.body.classList.contains('index-page')) {
+    searchButtonEl.addEventListener('click', getMovieDetails)
+} else if (document.body.classList.contains('watchlist-page')) {
+    document.addEventListener('DOMContentLoaded', renderWatchList)
+}
