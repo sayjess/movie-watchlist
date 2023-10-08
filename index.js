@@ -149,8 +149,10 @@ function displayMovies(movies) {
 }
 
 
-if(window.location.href.includes('index.html')){
-    searchButtonEl.addEventListener('click', getMovieDetails)
-} else if(window.location.href.includes('watchlist.html')){
-    document.addEventListener('DOMContentLoaded', renderWatchList)
-}
+// if(window.location.href.includes('index.html')){
+    
+// } else if(window.location.href.includes('watchlist.html')){
+// }
+
+searchButtonEl.addEventListener('click', getMovieDetails)
+document.addEventListener('DOMContentLoaded', renderWatchList)
