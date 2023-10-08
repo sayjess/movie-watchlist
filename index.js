@@ -154,5 +154,6 @@ function displayMovies(movies) {
 // } else if(window.location.href.includes('watchlist.html')){
 // }
 
+console.log(window.location.href)
 searchButtonEl.addEventListener('click', getMovieDetails)
 document.addEventListener('DOMContentLoaded', renderWatchList)
