@@ -112,7 +112,11 @@ async function getMovieDetails() {
             displayMovies(detailedMovies)
         } else {
             loadingSpinner.style.display = 'none'
-            document.getElementById('explore').textContent = "Not available"
+            movieListEl.innerHTML =
+                `<div class="start-exploring flex">
+                    <img src="img/Icon.png" alt="" />
+                    <p id="explore">Not available</p>
+                </div>`
         }
 
     }

@@ -1,0 +1,11 @@
+1. When you search a movie title that successfully return a data from the API and you search again for a movie title that does not exist on the API an error occurs:
+    index.js:115 Uncaught (in promise) TypeError: Cannot set properties of null (setting 'textContent')
+    at HTMLButtonElement.getMovieDetails (index.js:115:60)
+SOLUTION IDEAS: reset the movie lists upon searching a new title
+
+ACTUAL SOLUTION: added the following on line 116 in index.js
+    movieListEl.innerHTML =
+        `<div class="start-exploring flex">
+            <img src="img/Icon.png" alt="" />
+            <p id="explore">Not available</p>
+        </div>`
