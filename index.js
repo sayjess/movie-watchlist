@@ -68,7 +68,7 @@ function renderWatchList() {
                     <div class='movie-details-two flex'>
                         <p class="movie-info">${Runtime ? Runtime : 'N/A'}</p>
                         <p class="movie-info">${Genre ? Genre : 'N/A'}</p>
-                        <span class='watchlist-container flex'>
+                        <span class='watchlist-container flex' data-remove='${imdbID}>
                             <i class="fa-solid fa-circle-minus" data-remove='${imdbID}'></i>
                             <p data-remove='${imdbID}'>Remove</p>
                         </span>
@@ -127,7 +127,7 @@ function displayMovies(movies) {
                 <div class='movie-details flex'>
                     <div class='movie-details-one flex'>
                         <h2 class="movie-title">${Title}</h2>
-                        <span class='flex'>
+                        <span class='rating-container flex'>
                             <i class="fa-solid fa-star"></i>
                             <p class="movie-rating">${imdbRating ? imdbRating : 'N/A'}</p>
                         </span>
@@ -135,9 +135,9 @@ function displayMovies(movies) {
                     <div class='movie-details-two flex'>
                         <p class="movie-info">${Runtime ? Runtime : 'N/A'}</p>
                         <p class="movie-info">${Genre ? Genre : 'N/A'}</p>
-                        <button class='watchlist-container flex'>
+                        <button class='watchlist-container flex' data-add='${imdbID}>
                             <i class="fa-solid fa-circle-plus" data-add='${imdbID}'></i>
-                            <p data-add='${imdbID}'>Watchlist</p>
+                            <p class='watchlist-text' data-add='${imdbID}'>Watchlist</p>
                         </button>
                     </div>
                     <p class="movie-plot">${Plot ? Plot : 'N/A'}</p>
@@ -147,12 +147,6 @@ function displayMovies(movies) {
     }).join('')
     movieListEl.innerHTML = movieListHTML
 }
-
-
-// if(window.location.href.includes('index.html')){
-// } else if(window.location.href.includes('watchlist.html')){
-    
-// }
 
 if (document.body.classList.contains('index-page')) {
     searchButtonEl.addEventListener('click', getMovieDetails)
